@@ -13,7 +13,7 @@ const Search = ({updateCities, setLoading, setHasSearched}: SearchProps) => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if(!input.match(/^[A-Za-z]+$/)) {
-      alert('invalid input');
+      alert('Please provide the valid input');
       return
     }
     setLoading(true);
