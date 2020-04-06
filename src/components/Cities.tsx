@@ -34,7 +34,7 @@ export const Cities = ({cities, totalCities}: { cities: GroupedCities, totalCiti
       <TotalCities>Total cities found: {totalCities}</TotalCities>
       <Grid columns={columns}>
         {citiesToDisplay.map(([state, cities], index) => (
-          <StateRow name={state} cities={cities} rowNumber={index + 1} columns={columns}/>))}
+          <StateRow key={index} name={state} cities={cities} rowNumber={index + 1} columns={columns}/>))}
       </Grid>
     </CitiesContainer>
   )

@@ -1,5 +1,4 @@
-import React from 'react';
-import {useState} from "react";
+import React, {useState} from 'react';
 import {City} from "../store/cities/types";
 import {CitiesAdapter} from "../api/CitiesAdapter";
 
@@ -15,6 +14,7 @@ const Search = ({updateCities, setLoading, setHasSearched}: SearchProps) => {
     event.preventDefault();
     if(!input.match(/^[A-Za-z]+$/)) {
       alert('invalid input');
+      return
     }
     setLoading(true);
     const foundCities = await cities.getCities(input);

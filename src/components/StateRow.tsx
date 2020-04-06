@@ -11,7 +11,7 @@ export const StateRow = ({name, cities, rowNumber, columns}: { name: string, cit
       <GridCell rowNumber={rowNumber}>
         {name}
       </GridCell>
-      {cities.map((city) => (<GridCell rowNumber={rowNumber}>{city}</GridCell>))}
+      {cities.map((city, index) => (<GridCell key={index} rowNumber={rowNumber}>{city}</GridCell>))}
     </Fragment>
   )
 };
